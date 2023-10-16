@@ -1,0 +1,37 @@
+{
+  "name": "posts-api",
+  "version": "1.0.0",
+  "description": "TCIT soft. eng. task",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test",
+    "build": "rimraf dist && babel src --out-dir dist  --copy-files",
+    "start": "node dist/index.js",
+    "migrate": "node ./migrations",
+    "start:dev": "source .env && nodemon --exec babel-node src/index.js",
+    "sequelize:migrate": "source .env && npx sequelize-cli db:migrate --url $SEQUELIZE_URL",
+    "sequelize:migrate:generate": "npx sequelize-cli migration:generate --name",
+    "sequelize:migrate:revert": "source .env && npx sequelize-cli db:migrate:undo --url $SEQUELIZE_URL"
+  },
+  "author": "José Márquez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.33.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/node": "^7.22.19",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.23.2",
+    "nodemon": "^3.0.1",
+    "rimraf": "^5.0.5",
+    "sequelize-cli": "^6.6.1"
+  }
+}
