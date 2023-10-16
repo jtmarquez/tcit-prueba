@@ -1,8 +1,9 @@
 import React from "react";
+import Posts from "./views/posts/index.jsx";
 
 const App = () => {
     return (
-        <h1>React app</h1>
+        <Posts />
     )
 }
 
