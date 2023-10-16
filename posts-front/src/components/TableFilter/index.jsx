@@ -23,7 +23,7 @@ const TableFilter = (props) => {
 }
 
 TableFilter.defaultProps = {
-    searchPlaceholder: "Filtro de",
+    searchPlaceholder: "Filtro de nombre",
     searchButtonText: "Buscar",
 }
 
