@@ -1,0 +1,9 @@
+.posts-main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.posts-elements {
+    width: 60%;
+}
