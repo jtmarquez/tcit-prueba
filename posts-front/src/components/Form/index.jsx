@@ -20,7 +20,7 @@ const Form = (props) => {
 
     return (
         <div className="form-container">
-            {formFields.map((field) => <FormField {...field} onChange={onChange} value={values[field.name]} />)}
+            {formFields.map((field) => <FormField key={field.name} {...field} onChange={onChange} value={values[field.name]} />)}
             <button onClick={handleOnSubmit}>{submitText}</button>
         </div>    
     )
